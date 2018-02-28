@@ -1,0 +1,14 @@
+<!--#include file="lib\mercadopago.asp"-->
+
+<%
+	Dim mp
+	Dim accessToken
+	
+	Set mp = new Mercadopago
+	
+	mp.construct " 6237681624594573", "vUF0Mgm5DkTxI1rf4rAX07CfzAxl2YLa"
+
+	accessToken = mp.get_access_token()
+
+	Response.write (accessToken)
+%>
